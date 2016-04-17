@@ -39,9 +39,16 @@ public class TicTacToeServer {
         System.out.println("Tic Tac Toe Server is Running");
         try {
             while (true) {
+                System.out.println("waiting");
                 Game game = new Game();
+                //Socket s1 = listener.accept();
                 Game.Player playerX = game.new Player(listener.accept(), 'X');
+                System.out.println("The first player is in");
                 Game.Player playerO = game.new Player(listener.accept(), 'O');
+                //Socket s2 = listener.accept();
+                System.out.println("The second player is in");
+                //System.out.println(s1 == s2);
+                //System.out.println(s1.equals(s2));
                 playerX.setOpponent(playerO);
                 playerO.setOpponent(playerX);
                 game.currentPlayer = playerX;

@@ -171,16 +171,19 @@ public class TicTacToeClient {
      */
     public static void main(String[] args) throws Exception {
         while (true) {
-	    String serverAddress = JOptionPane.showInputDialog(
-            	"Enter IP Address of a machine that is\n" +
-                "running the service on port 8901:");
-            Socket s = new Socket(serverAddress, 8901);
+            //String serverAddress = JOptionPane.showInputDialog(
+            //       "Enter IP Address of a machine that is\n" +
+            //      "running the service on port 8901:");
+            String serverAddress = "128.83.143.158";
+            //String serverAddress = "128.83.143.137";
+            System.out.println("Created socket");
             TicTacToeClient client = new TicTacToeClient(serverAddress);
             client.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             client.frame.setSize(240, 160);
             client.frame.setVisible(true);
             client.frame.setResizable(false);
             client.play();
+            System.out.println("Finished play");
             if (!client.wantsToPlayAgain()) {
                 break;
             }
