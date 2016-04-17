@@ -104,8 +104,8 @@ public class TicTacToeClient {
             response = in.readLine();
             if (response.startsWith("WELCOME")) {
                 char mark = response.charAt(8);
-                icon = new ImageIcon(mark == 'X' ? "x.gif" : "o.gif");
-                opponentIcon  = new ImageIcon(mark == 'X' ? "o.gif" : "x.gif");
+                icon = new ImageIcon(mark == 'X' ? "x.png" : "o.png");
+                opponentIcon  = new ImageIcon(mark == 'X' ? "o.png" : "x.png");
                 frame.setTitle("Tic Tac Toe - Player " + mark);
             }
             while (true) {
